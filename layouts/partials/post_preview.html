@@ -1,18 +1,16 @@
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
     <div class="card h-100 single-post-card shadow-effect bg-faded-light">
         <a class="card-flex" href="{{ .Permalink }}">
-            <div class="card-body">
+            <div class="card-body p-4">
 
-                <h3 class="fw-bold post-title">{{ .Title }}</h3>
+                <h3 class="fw-bold post-title accent">{{ .Title }}</h3>
                 {{ if .Params.subtitle }}
                 <h3 class="post-subtitle">
                     {{ .Params.subtitle }}
                 </h3>
                 {{ end }}
 
-                <p class="post-meta">
-                    {{ partial "post_meta.html" . }}
-                </p>
+                <p class="post-meta">{{ partial "post_meta.html" . }}</p>
                 {{ print }}
                 <div class="post-entry">
 

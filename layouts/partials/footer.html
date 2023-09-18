@@ -24,7 +24,8 @@
           {{ end }}
           {{ if .Site.Params.rss }}
           <li>
-            <a href="{{ with .OutputFormats.Get " RSS" }}{{ .RelPermalink }}{{ end }}" title="RSS">
+            <!-- <a href="{{ with .OutputFormats.Get " RSS" }}{{ .RelPermalink }}{{ end }}" title="RSS"> -->
+            <a href="/index.xml" title="RSS">
               <span class="mx-2">
                 <i class="bi bi-rss"></i>
               </span>
@@ -37,7 +38,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <p class="credits copyright text-muted">
+        <!-- <p class="credits copyright text-muted">
           {{ if .Site.Author.name }}
           {{ if .Site.Author.website }}
           <a href="{{ .Site.Author.website }}">{{ .Site.Author.name }}</a>
@@ -57,13 +58,21 @@
           &nbsp;&bull;&nbsp;
           <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
           {{ end }}
-        </p>
-        <!-- Please don't remove this, keep my open source work credited. -->
-        <p class="credits theme-by text-muted">
-          {{ i18n "poweredBy" . | safeHTML }}
-          {{ if $.GitInfo }}&nbsp;&bull;&nbsp;[<a href="{{ .Site.Params.commit }}{{ .GitInfo.Hash }}">{{ substr
-            .GitInfo.Hash 0 8 }}</a>]{{ end }}
-        </p>
+        </p> -->
+        
+        <div class="d-flex align-items-center flex-column">
+          <a class="text-muted text-center fit-content" data-bs-toggle="collapse" href="#theme-info" role="button" aria-expanded="false" aria-controls="theme-info">
+             Acknowledgements <i class="bi bi-arrow-down-short"></i>
+          </a>
+          <div class="collapse" id="theme-info">
+            <!-- Please don't remove this, keep my open source work credited. -->
+            <p class="credits theme-by text-muted">
+              {{ i18n "poweredBy" . | safeHTML }}
+              {{ if $.GitInfo }}&nbsp;&bull;&nbsp;[<a href="{{ .Site.Params.commit }}{{ .GitInfo.Hash }}">{{ substr
+                .GitInfo.Hash 0 8 }}</a>]{{ end }}
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   </div>

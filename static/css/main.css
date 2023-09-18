@@ -1,6 +1,7 @@
 /* --- General --- */
 
 body {
+  font-family: 'Nunito', sans-serif;
   font-size: 1.2rem;
   color: #344854;
   position: relative;
@@ -37,7 +38,7 @@ p a {
 
 
 li a {
-  color: #008AFF;
+  color: #2b3d41;
 }
 
 a {
@@ -421,7 +422,7 @@ footer .theme-by {
 .post-title:focus,
 .post-title:hover {
   text-decoration: none;
-  color: #2ec458
+  /* color: #fdcfe5; */
     /* #FF0000;  */
 }
 
@@ -897,11 +898,11 @@ ul.share li:hover .fab {
 
 /* eo font style */
 
-.navbar {
+/* .navbar {
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.08);
   background-color: rgba(255, 255, 255, .98);
   z-index: 9999;
-}
+} */
 
 .navbar-brand {
   font-size: 1.5rem;
@@ -953,9 +954,8 @@ ul.share li:hover .fab {
   color: #4B4F56;
   border: 0px;
   margin: 0 2%;
-  -webkit-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-  -moz-transition: all 250ms cubic-bezier(.02, .01, .47, 1);
-  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+  transition: all ease-out .14s;
+  will-change: transform;
   transition-delay: 0s;
 }
 
@@ -978,9 +978,9 @@ ul.share li:hover .fab {
 /* Transform commented to avoid jumping transition when hovering cards */
 
 .single-post-card:hover {
-  box-shadow: 0 40px 40px rgba(0, 0, 0, .16);
+  box-shadow: -26px 20px 44px #2b3d4114;
   transition-delay: 0s !important;
-  /* transform: translate(0,-20px); */
+  transform: rotateZ(.4deg) rotateY(-5deg) rotateX(-5deg) translateZ(-12px);
 }
 
 .main .row {
@@ -1011,7 +1011,8 @@ ul.share li:hover .fab {
 }
 
 .shadow-effect {
-  box-shadow: 0 20px 20px rgba(0, 0, 0, .08);
+  box-shadow: 0px 0px 28px #2b3d4114;
+  border: 1px solid #eaeaea;
 }
 
 .pl-0 {
@@ -1085,4 +1086,30 @@ ul.share li:hover .fab {
 
 .flex-row {
   flex-direction: row;
+}
+
+#dark-mode-toggle {
+  cursor: pointer;
+}
+
+.navbar.fixed-top {
+  position: absolute;
+}
+
+.accent {
+  color: #ff67ae !important;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+.post-meta-big .post-meta {
+  color: #808080;
+  font-size: 1em !important;
+  font-style: normal;
+}
+
+.blog-tags:first-child {
+  margin-left: -5px;
 }
