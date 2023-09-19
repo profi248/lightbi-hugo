@@ -102,16 +102,10 @@ div.panel-body a.list-group-item.view-all {
   font-weight: 600;
 }
 
-::-moz-selection {
-  color: white;
-  text-shadow: none;
-  background: #ED1B2F;
-}
-
 ::selection {
   color: white;
   text-shadow: none;
-  background: #ED1B2F;
+  background: #ff67ae;
 }
 
 img::selection {
@@ -558,7 +552,7 @@ footer .theme-by {
 .intro-header {
   margin: 50px 0 20px;
   position: relative;
-  margin-top: 130px;
+  margin-top: 90px;
 }
 
 .intro-header.big-img {
@@ -1098,6 +1092,18 @@ ul.share li:hover .fab {
 
 .accent {
   color: #ff67ae !important;
+}
+
+.accent-dark {
+  color: #2b3d41;
+}
+
+.btn-dark {
+  background: #2b3d41;
+}
+
+.btn-dark:hover {
+  background: #364c51;
 }
 
 .fit-content {

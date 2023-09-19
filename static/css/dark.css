@@ -33,3 +33,10 @@ body * [style*="background-image"] {
   filter: hue-rotate(180deg) contrast(100%) invert(100%);
   color: #fdcfe5 !important;
 }
+
+::selection {
+  filter: hue-rotate(180deg) contrast(100%) invert(100%);
+  color: white;
+  text-shadow: none;
+  background: #fdcfe5 !important;
+}
