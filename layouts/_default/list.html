@@ -1,10 +1,17 @@
 
 {{ define "main" }}
-<div class="container" role="main">
+
+<div class="container px-0" role="main">
   <div class="row">
-    <div class="col-md-12">
-      {{ with .Content }}
-        <div class="well">
+    <div class="col-md-12 text-center">
+      {{$section_heading := .Site.GetPage "section" .Section }}
+      {{ if ne .Type "tags" }}
+        {{ with $section_heading}}
+          <h1 class="display-5 accent m-2 fw-bold">{{- .Title -}}</h1>
+        {{ end }}
+      {{ end }}
+      {{ with .Content  }}
+        <div class="well m-2 mb-5">
           {{.}}
         </div>
       {{ end }} 
